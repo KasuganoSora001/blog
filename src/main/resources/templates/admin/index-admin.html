@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/dist/semantic.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/asserts/css/me.css}"/>
+
+</head>
+<body>
+
+<div th:replace="~{commons/bar :: admin-top-bar(activeUri='admin-index',active_pub_list='list')}"></div>
+<div th:replace="~{commons/bar :: admin-second-top-bar(activeUri='admin-index',active_pub_list='list')}"></div>
+
+<!--搜索栏-->
+<div class="m-container m-padded-tb-big">
+    <div class="ui container">
+        <form action="#" method="post" class="ui segment form attached">
+            <div class="inline fields">
+                <div class="field">
+                    <input type="text" name="title" placeholder="标题">
+                </div>
+                <div class="field">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="category">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">分类</div>
+                        <div class="menu">
+                            <!--data-value是传到后端的值-->
+                            <div class="item" data-value="1">错误日志</div>
+                            <div class="item" data-value="2">开发者手册</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="recommend" name="recommend">
+                        <label for="recommend">推荐</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <button class="ui teal basic button mini"><i class="search icon"></i>搜索</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="ui celled table teal attached segment">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>标题</th>
+                    <th>类型</th>
+                    <th>更新时间</th>
+                    <th>推荐</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>redis</td>
+                    <td>知识点</td>
+                    <td>2019-11-28</td>
+                    <td>推荐</td>
+                    <td>
+                        <a href="#" class="ui mini teal basic button">编辑</a>
+                        <a href="#" class="ui mini red basic button">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="6">
+                        <div class="ui center aligned">
+                            <div class="ui pagination menu">
+                                <a class="item">上一页</a>
+                                <a class="item">下一页</a>
+                            </div>
+                            <a href="#" class="ui blue basic button mini right floated">新增</a>
+                        </div>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+
+
+    </div>
+</div>
+
+
+</body>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+<script th:src="@{/dist/semantic.min.js}"></script>
+
+<script>
+    $('.ui.dropdown').dropdown();
+</script>
+
+</html>

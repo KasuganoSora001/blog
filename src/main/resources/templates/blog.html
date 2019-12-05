@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Content</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/dist/semantic.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/asserts/css/me.css}"/>
+
+</head>
+<body>
+
+<!--引入导航栏-->
+<div th:replace="~{commons/bar :: top-bar(activeUri='blog')}"></div>
+
+
+<!--中间内容-->
+<div class="m-container m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui top attached segment">
+            <div class="ui large horizontal link list">
+                <div class="item">
+                    <i class="user icon m-inline-block"></i> <a href="#" target="_blank">刘伟衡</a>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i> 2019-11-26
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i> 123
+                </div>
+            </div>
+        </div>
+        <div class="ui attached padded segment">
+            <img th:src="@{/asserts/images/example.jpg}" alt="" class="ui rounded image centered" style="width: 60%;">
+        </div>
+        <div class="ui attached segment">
+            <div class="ui segment right aligned basic">
+                <div class="ui orange label basic">原创</div>
+            </div>
+        </div>
+        <div class="ui attached positive message">
+
+            <h2 class="ui header centered">关于刻意联系的名单</h2>
+
+            <div id="content" class="m-padded-lr">巴拉巴拉</div>
+
+            <!--标签-->
+            <div class="m-padded-lr">
+                <div class="ui basic teal left pointing label">方法论</div>
+            </div>
+
+            <!--赞赏-->
+            <div class="ui center aligned basic segment">
+                <button id="pay-btn" class="ui orange basic circular button">赞赏</button>
+            </div>
+
+            <div class="ui payQR flowing popup transition hidden">
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit">
+                        <div>wechat</div>
+                        <div class="image">
+                            <img th:src="@{/asserts/images/pay-wechat.png}" alt="" class="ui image rounded bordered" style="width:120px">
+                        </div>
+                        <div>alipay</div>
+                        <div class="image">
+                            <img th:src="@{/asserts/images/pay-alipay.png}" alt="" class="ui image rounded bordered" style="width:120px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--博客信息-->
+        <div class="ui attached positive message">
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <div class="list m-text">
+                        <li>作者：刘伟衡（联系作者）</li>
+                        <li>发表时间：2019-11-28</li>
+                        <li>版权声明：自由转载</li>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <img th:src="@{/asserts/images/wechat.jpg}" alt="" class="ui right floated rounded bordered image" style="width: 110px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="ui bottom attached segment">
+            <!--留言区域列表-->
+            <div class="ui teal segment">
+                <div class="ui comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img th:src="@{/asserts/images/head.jpg}">
+                        </a>
+                        <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">Today at 5:42PM</span>
+                            </div>
+                            <div class="text">
+                                How artistic!
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img th:src="@{/asserts/images/head.jpg}">
+                        </a>
+                        <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                                <span class="date">Yesterday at 12:30AM</span>
+                            </div>
+                            <div class="text">
+                                <p>This has been very useful for my research. Thanks as well!</p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img th:src="@{/asserts/images/head.jpg}">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                        <span class="date">Just now</span>
+                                    </div>
+                                    <div class="text">
+                                        Elliot you are always so right :)
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img th:src="@{/asserts/images/head.jpg}">
+                        </a>
+                        <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                                <span class="date">5 days ago</span>
+                            </div>
+                            <div class="text">
+                                Dude, this is awesome. Thanks so much
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content" placeholder="请输入评论信息..."></textarea>
+                </div>
+                <div class="fields">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名"/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="text" name="email" placeholder="邮箱"/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui button teal"><i class="edit icon"></i>发布</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--引入底部footer-->
+<div th:replace="~{commons/bar :: bottom-bar}"></div>
+
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+<script th:src="@{/dist/semantic.min.js}"></script>
+
+<script>
+    $('#pay-btn').popup({
+        popup : $('.payQR.popup'),
+        on : 'click',
+        position : 'bottom center'
+    });
+</script>
+
+</body>
+</html>

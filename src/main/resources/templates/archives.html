@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>归档</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/dist/semantic.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/asserts/css/me.css}"/>
+
+</head>
+<body>
+
+<!--引入导航栏-->
+<div th:replace="~{commons/bar :: top-bar(activeUri='archives')}"></div>
+
+
+<!--中间内容-->
+<div class="m-container m-padded-tb-big">
+
+    <div class="ui container">
+        <!--头部-->
+        <div class="ui top attached segment">
+            <div class="ui two column grid middle aligned">
+                <div class="column">
+                    <div class="ui teal header">归档</div>
+                </div>
+                <div class="right aligned column">
+                    共<h2 class="ui orange m-inline-block header">113</h2>个
+                </div>
+            </div>
+        </div>
+
+        <div class="ui attached segment">
+            <h2 class="ui center aligned header">2019</h2>
+            <div class="ui vertical menu fluid">
+                <a href="#" class="item">
+                    <span>
+                        <i class="mini teal circle icon"></i>
+                        关于刻意练习的清单
+                        <div class="ui teal basic left pointing label m-padded-tb-mini">11-28</div>
+                    </span>
+                    <div class="ui orange basic label">原创</div>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<!--引入底部footer-->
+<div th:replace="~{commons/bar :: bottom-bar}"></div>
+
+
+</body>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+<script th:src="@{/dist/semantic.min.js}"></script>
+
+
+</html>

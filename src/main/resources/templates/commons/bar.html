@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/dist/semantic.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/asserts/css/me.css}"/>
+
+</head>
+<body>
+
+
+
+<!--导航栏-->
+<nav class="ui inverted attached segment m-padded-tb-mini" th:fragment="top-bar">
+    <div class="ui container">
+        <div class="ui inverted stackable secondary menu">
+            <h2 class="ui teal header item">Blog</h2>
+            <a href="#" class="item" th:class="${activeUri=='index'?'item active':'item'}" th:href="@{/index}"><i class="mini home icon"></i>首页</a>
+            <a href="#" class="item" th:class="${activeUri=='category'?'item active':'item'}" th:href="@{/category}"><i class="mini idea icon"></i>分类</a>
+            <a href="#" class="item" th:class="${activeUri=='tag'?'item active':'item'}" th:href="@{/category}"><i class="mini tags icon"></i>标签</a>
+            <a href="#" class="item" th:class="${activeUri=='archives'?'item active':'item'}" th:href="@{/archives}"><i class="mini clone icon"></i>归档</a>
+            <a href="#" class="item" th:class="${activeUri=='about'?'item active':'item'}" th:href="@{/about}"><i class="mini info icon"></i>关于我</a>
+            <div class="right item">
+                <div class="ui icon transparent inverted input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!--底部footer-->
+<footer class="ui inverted vertical segment m-padded-tb-massive" th:fragment="bottom-bar">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img th:src="@{/asserts/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <h4 class="ui header inverted">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事(User Story)</a>
+                    <a href="#" class="item">用户故事(User Story)</a>
+                    <a href="#" class="item">用户故事(User Story)</a>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <h4 class="ui header inverted">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email：1977274689@qq.com</a>
+                    <a href="#" class="item">QQ：1977274689</a>
+                </div>
+            </div>
+
+            <div class="five wide column">
+                <h4 class="ui header inverted">关于我</h4>
+                <p class="m-text m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这里的人有所帮助...</p>
+            </div>
+        </div>
+
+        <div class="ui inverted section divider"></div>
+
+        <p class="m-text m-opacity-mini">Copyright©2019-2020 KasuganoSora Designed by KasuganoSora</p>
+
+    </div>
+</footer>
+
+
+<!--admin-导航栏-->
+<nav class="ui inverted attached segment m-padded-tb-mini" th:fragment="admin-top-bar">
+    <div class="ui container">
+        <div class="ui inverted stackable secondary menu">
+            <h2 class="ui teal header item">后台管理</h2>
+            <a href="#" class="item" th:class="${activeUri=='admin-index'?'item active':'item'}"><i class="mini home icon"></i>博客</a>
+            <a href="#" class="item" th:class="${activeUri=='category'?'item active':'item'}"><i class="mini idea icon"></i>分类</a>
+            <a href="#" class="item" th:class="${activeUri=='tag'?'item active':'item'}"><i class="mini tags icon"></i>标签</a>
+            <div class="right menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img class="ui avatar image" th:src="@{/asserts/images/github-img.jpg}">
+                        KasuganoSora
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--admin-二级导航栏-->
+<div class="ui attached inverted pointing menu" th:fragment="admin-second-top-bar">
+    <div class="ui container ">
+        <div class="right menu">
+            <a href="#" class="item" th:class="${active_pub_list=='pub'?'active teal item':'item'}">发布</a>
+            <a href="#" class="item" th:class="${active_pub_list=='list'?'active teal item':'item'}">列表</a>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+<script th:src="@{/dist/semantic.min.js}"></script>
+
+</body>
+
+</html>

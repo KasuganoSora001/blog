@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/dist/semantic.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/asserts/css/me.css}"/>
+    <title>首页</title>
+</head>
+<body>
+    <!--引入导航栏-->
+    <div th:replace="~{commons/bar :: top-bar(activeUri='index')}"></div>
+
+    <!--中间内容-->
+    <div class="m-container m-padded-tb-large">
+        <div class="ui container">
+            <div class="ui stackable grid">
+
+                <!--左边博客内容-->
+                <div class="eleven wide column">
+                    <div class="ui segment top attached">
+                        <div class="ui middle aligned  two column grid">
+                            <div class="column">
+                                <div class="ui teal header">博客</div>
+                            </div>
+                            <div class="right aligned column">
+                                共 <h3 class="ui orange header m-inline-block">14</h3> 篇
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--content-->
+                    <div class="ui segment attached">
+                        <div class="ui segment padded vertical m-padded-tb-large">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">挣钱是手段，赚钱是智慧</h3>
+                                    <p class="m-text">省钱是永远不可能成为富翁的，只有不断赚钱才能够成为富翁，这是一个再简单不过的道理了，并不是说攒钱就是错误...</p>
+                                    <div class="ui grid middle aligned">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <i class="user icon m-inline-block"></i> 刘伟衡
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i> 2019-11-26
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i> 123
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column right aligned">
+                                            <a href="#" target="_blank" class="ui label teal basic m-padded-mini">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column ">
+                                    <a href="#" target="_blank">
+                                        <img th:src="@{/asserts/images/wechat.jpg}" alt="" class="ui rounded image" style="height: 65%; width: 130%">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment padded vertical m-padded-tb-large">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">挣钱是手段，赚钱是智慧</h3>
+                                    <p class="m-text">省钱是永远不可能成为富翁的，只有不断赚钱才能够成为富翁，这是一个再简单不过的道理了，并不是说攒钱就是错误...</p>
+                                    <div class="ui grid middle aligned">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <i class="user icon m-inline-block"></i> 刘伟衡
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i> 2019-11-26
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i> 123
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column right aligned">
+                                            <a href="#" target="_blank" class="ui label teal basic m-padded-mini">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column ">
+                                    <a href="#" target="_blank">
+                                        <img th:src="@{/asserts/images/wechat.jpg}" alt="" class="ui rounded image" style="height: 65%; width: 130%">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment padded vertical m-padded-tb-large">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">挣钱是手段，赚钱是智慧</h3>
+                                    <p class="m-text">省钱是永远不可能成为富翁的，只有不断赚钱才能够成为富翁，这是一个再简单不过的道理了，并不是说攒钱就是错误...</p>
+                                    <div class="ui grid middle aligned">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <i class="user icon m-inline-block"></i> 刘伟衡
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i> 2019-11-26
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i> 123
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column right aligned">
+                                            <a href="#" target="_blank" class="ui label teal basic m-padded-mini">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column ">
+                                    <a href="#" target="_blank">
+                                        <img th:src="@{/asserts/images/wechat.jpg}" alt="" class="ui rounded image" style="height: 65%; width: 130%">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment padded vertical m-padded-tb-large">
+                            <div class="ui mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header">挣钱是手段，赚钱是智慧</h3>
+                                    <p class="m-text">省钱是永远不可能成为富翁的，只有不断赚钱才能够成为富翁，这是一个再简单不过的道理了，并不是说攒钱就是错误...</p>
+                                    <div class="ui grid middle aligned">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <i class="user icon m-inline-block"></i> 刘伟衡
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i> 2019-11-26
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i> 123
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="five wide column right aligned">
+                                            <a href="#" target="_blank" class="ui label teal basic m-padded-mini">认知升级</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column ">
+                                    <a href="#" target="_blank">
+                                        <img th:src="@{/asserts/images/wechat.jpg}" alt="" class="ui rounded image" style="height: 65%; width: 130%">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--bottom-->
+                    <div class="ui segment bottom attached">
+                        <div class="ui middle aligned  two column grid">
+                            <div class="column">
+                                <a href="#" class="ui button mini basic teal">上一页</a>
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" class="ui button mini basic teal">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--右边的top-->
+                <div class="five wide column">
+
+                    <!--分类-->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="idea icon"></i>
+                                    分类
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank">more<i class="angle right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui segment teal">
+                            <div class="ui fluid vertical menu">
+                                <a href="#" class="item">
+                                    学习日志
+                                    <div class="ui label teal basic left pointing">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    学习日志
+                                    <div class="ui label teal basic left pointing">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    学习日志
+                                    <div class="ui label teal basic left pointing">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    学习日志
+                                    <div class="ui label teal basic left pointing">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    学习日志
+                                    <div class="ui label teal basic left pointing">13</div>
+                                </a>
+                                <a href="#" class="item">
+                                    学习日志
+                                    <div class="ui label teal basic left pointing">13</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--标签-->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="tags icon"></i>
+                                    标签
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank">more <i class="angle right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui teal segment">
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                            <a href="#" target="_blank" class="ui teal basic label m-margin-tb-small">方法论 <div class="detail">23</div></a>
+                        </div>
+                    </div>
+
+                    <!--最新推荐-->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <i class="bookmark icon"></i>最新推荐
+                        </div>
+                        <!--<div class="ui segment teal">-->
+                            <!--<div class="ui fluid vertical menu">-->
+                                <!--<a href="#" target="_blank" class="item m-text-thin m-font-color-black">用户故事(User Story)</a>-->
+                                <!--<a href="#" target="_blank" class="item m-text-thin m-font-color-black">用户故事(User Story)</a>-->
+                                <!--<a href="#" target="_blank" class="item m-text-thin m-font-color-black">用户故事(User Story)</a>-->
+                                <!--<a href="#" target="_blank" class="item m-text-thin m-font-color-black">用户故事(User Story)</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="ui segment teal">
+                            <a href="#" target="_blank" class="m-text-thin m-font-color-black">用户故事(User Story)</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-text-thin m-font-color-black">用户故事(User Story)</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-text-thin m-font-color-black">用户故事(User Story)</a>
+                        </div>
+                        <div class="ui segment">
+                            <a href="#" target="_blank" class="m-text-thin m-font-color-black">用户故事(User Story)</a>
+                        </div>
+                    </div>
+
+                    <!--二维码-->
+                    <h4 class="ui horizontal divider header">扫码关注我</h4>
+                    <div class="ui centered card" style="width: 11em;">
+                        <img th:src="@{/asserts/images/wechat.jpg}" alt="" class="ui rounded image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--引入底部footer-->
+    <div th:replace="~{commons/bar :: bottom-bar}"></div>
+
+
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+<script th:src="@{/dist/semantic.min.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>分类页面</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/dist/semantic.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/asserts/css/me.css}"/>
+
+</head>
+<body>
+
+<!--引入导航栏-->
+<div th:replace="~{commons/bar :: top-bar(activeUri='category')}"></div>
+
+
+<div class="m-container m-padded-tb-big">
+
+    <div class="ui container">
+        <!--头部-->
+        <div class="ui top attached segment">
+            <div class="ui two column grid middle aligned">
+                <div class="column">
+                    <div class="ui teal header">分类</div>
+                </div>
+                <div class="right aligned column">
+                    共<h2 class="ui orange m-inline-block header">13</h2>个
+                </div>
+            </div>
+        </div>
+
+        <!--标签展示-->
+        <div class="ui attached segment m-padded-tb-large">
+            <div class="ui labeled button m-margin-tb-small">
+                <div class="ui teal rounded basic button">思想与感悟</div>
+                <div class="ui teal basic left pointing label">10</div>
+            </div>
+
+            <div class="ui labeled button m-margin-tb-small">
+                <div class="ui rounded basic button ">思想与感悟</div>
+                <div class="ui basic left pointing label">10</div>
+            </div>
+
+
+
+        </div>
+
+        <!--对应标签的博客列表-->
+        <div class="ui teal top attached segment">
+            <div class="ui segment padded vertical m-padded-tb-large">
+                <div class="ui mobile reversed stackable grid">
+                    <div class="eleven wide column">
+                        <h3 class="ui header">挣钱是手段，赚钱是智慧</h3>
+                        <p class="m-text">省钱是永远不可能成为富翁的，只有不断赚钱才能够成为富翁，这是一个再简单不过的道理了，并不是说攒钱就是错误...</p>
+                        <div class="ui grid middle aligned">
+                            <div class="row">
+                                <div class="eleven wide column">
+                                    <div class="ui mini horizontal link list">
+                                        <div class="item">
+                                            <i class="user icon m-inline-block"></i> 刘伟衡
+                                        </div>
+                                        <div class="item">
+                                            <i class="calendar icon"></i> 2019-11-26
+                                        </div>
+                                        <div class="item">
+                                            <i class="eye icon"></i> 123
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="five wide column right aligned">
+                                    <a href="#" target="_blank" class="ui label teal basic m-padded-mini">认知升级</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a href="#" class="ui basic teal left pointing label m-text-thin m-margin-tb-left">方法论</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="five wide column ">
+                        <a href="#" target="_blank">
+                            <img th:src="@{/asserts/images/wechat.jpg}" alt="" class="ui rounded image" style="height: 65%; width: 130%">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ui segment bottom attached">
+            <div class="ui middle aligned  two column grid">
+                <div class="column">
+                    <a href="#" class="ui button mini basic teal">上一页</a>
+                </div>
+                <div class="right aligned column">
+                    <a href="#" class="ui button mini basic teal">下一页</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!--引入底部footer-->
+<div th:replace="~{commons/bar :: bottom-bar}"></div>
+
+
+
+</body>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+<script th:src="@{/dist/semantic.min.js}"></script>
+
+</html>

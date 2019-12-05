@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/dist/semantic.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/asserts/css/me.css}"/>
+
+</head>
+<body style="background: grey;">
+
+
+<!--引入导航栏-->
+<div th:replace="~{commons/bar :: top-bar(activeUri='about')}"></div>
+
+<!--中间内容-->
+<div class="m-container m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <!--左侧图片部分-->
+            <div class="eleven wide column">
+                <img th:src="@{/asserts/images/about-me.jpg}" alt="" class="ui rounded bordered image" style="width: 800px;height: 600px;">
+            </div>
+            <!--右侧介绍部分-->
+            <div class="five wide column">
+                <div class="ui top attached segment">
+                    <div class="ui header">关于我</div>
+                </div>
+                <div class="ui attached segment">
+                    <p class="m-text">KasuganoSora  一个Java开发爱好者，热爱编程，正朝着大佬前进</p>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui orange basic label">编程</div>
+                    <div class="ui orange basic label">动漫</div>
+                    <div class="ui orange basic label">健身</div>
+                    <div class="ui orange basic label">游戏</div>
+                    <div class="ui orange basic label">偷懒</div>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui basic orange teal label">Java</div>
+                    <div class="ui basic orange teal label">JavaScript</div>
+                    <div class="ui basic orange teal label">Spring</div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <a href="https://github.com/KasuganoSora001" id="github-icon" class="ui circular icon button" data-tooltip="点击进入github" data-position="button center"><i class="github icon"></i></a>
+                    <a href="#" id="wechat-icon" class="ui circular icon button"><i class="weixin icon"></i></a>
+                    <a href="#" id="qq-icon" class="ui circular icon button"><i class="qq icon"></i></a>
+                </div>
+                <div class="ui wechat-img flowing popup top left transition" style="width:50%">
+                    <img th:src="@{/asserts/images/wechat-add.jpg}" alt="" class="ui medium image" >
+                </div>
+                <div class="ui qq-img flowing popup top left transition" style="width: 50%;">
+                    <img th:src="@{/asserts/images/qq-add.png}" alt="" class="ui medium image">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--引入底部footer-->
+<div th:replace="~{commons/bar :: bottom-bar}"></div>
+
+
+</body>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+<script th:src="@{/dist/semantic.min.js}"></script>
+
+<script>
+    $('#wechat-icon').popup({
+        popup: $('.wechat-img.popup'),
+        position: 'bottom center',
+        on: 'hover'
+    });
+    $('#qq-icon').popup({
+        popup: $('.qq-img.popup'),
+        position: 'bottom center',
+        on: 'hover'
+    });
+</script>
+
+</html>
